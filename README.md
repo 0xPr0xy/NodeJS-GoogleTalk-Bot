@@ -1,6 +1,17 @@
 Node.js Google Talk Bot
 ------------------------
 
+Supported Commands
+-------------------
+This bot supports the following commands:
+	
+	SoundCloud sc;artist
+	StackOverflow so;query
+	HackerNews hn;
+	Twitter t;query
+	Status s;status
+	Bounce b;message
+
 Dependencies
 -------------
 	"express": "~3.1.0",
