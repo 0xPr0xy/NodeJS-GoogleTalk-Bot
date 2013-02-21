@@ -1,0 +1,124 @@
+extends layout
+
+block content
+    h1 #{title}
+        span by 
+            a(href='http://0xpr0xy.blogspot.nl/', title='0xPr0xy') 0xPr0xy
+    h2 Try the demo
+    p Add #{bot_email} to your contacts to talk with the bot.
+    p Hosted on 
+        a(href='http://heroku.com', title='Heroku Node.js hosting') Heroku
+        .
+    h2 Documentation
+    ul#documentation-index
+
+        li
+            a(href='#command-hackernews', title='HackerNews command documentation') HackerNews (hn;)
+        li
+            a(href='#command-stackoverflow', title='StackOverflow command documentation') StackOverflow (so;)
+        li
+            a(href='#command-soundcloud', title='SoundCloud command documentation') SoundCloud (sc;)
+        li
+            a(href='#command-twitter', title='Twitter command documentation') Twitter (t;)
+        li
+            a(href='#command-status', title='Status command documentation') Status (s;)
+        li
+            a(href='#command-bounce', title='Bounce command documentation') Bounce (b;)
+    div.command
+        h3#command-hackernews HackerNews (hn;)
+        p Used to get posts from the HackerNews frontpage
+        h4 Example
+        h5 Request
+        blockquote hn;
+        h5 Response
+        p This command will return a status message and articles on the frontpage from the Hackernews search API
+        h6 Message 1
+        blockquote Searching hackernews, please be patient...
+        h6 Message 2
+        blockquote http://cdixon.org/2013/02/13/the-credentials-trap/
+        h6 Message 3
+        blockquote http://cmx.io
+        h6 Message 4
+        blockquote http://www.jdsupra.com/legalnews/top-ten-reasons-to-file-your-patent-appl-98912/
+        h6 Message 5
+        blockquote http://ilikecode.wordpress.com/2013/02/12/stupid-stupid-xbox/
+        h6 Message 6
+        blockquote https://github.com/qiao/euphony
+    div.command
+        h3#command-stackoverflow StackOverflow (so;)
+        p Used to search StackOverflow for the supplied term.
+        h4 Example
+        h5 Request
+        blockquote so;jQuery
+        h5 Response
+        p This command will return a status message and upto 5 results from the Soundcloud search API
+        h6 Message 1
+        blockquote Searching StackOverflow, please be patient...
+        h6 Message 2
+        blockquote jQuery load external site page http://stackoverflow.com/questions/14999573/jquery-load-external-site-page
+        h6 Message 3
+        blockquote Jquery and IE8 issue http://stackoverflow.com/questions/14999426/jquery-and-ie8-issue
+        h6 Message 4
+        blockquote Is there a &quot;Rails Way&quot; include a jQuery plugin in the Asset Pipeline? http://stackoverflow.com/questions/14738012/is-there-a-rails-way-include-a-jquery-plugin-in-the-asset-pipeline
+        h6 Message 5
+        blockquote Jquery check if input .val() contains certain characters http://stackoverflow.com/questions/14999104/jquery-check-if-input-val-contains-certain-characters
+        h6 Message 6
+        blockquote Jquery mobile navigation functionality? http://stackoverflow.com/questions/14999284/jquery-mobile-navigation-functionality
+    div.command
+        h3#command-soundcloud SoundCloud (sc;)
+        p Used to search SounCloud for the supplied term.
+        h4 Example
+        h5 Request
+        blockquote sc;Savant
+        h5 Response
+        p This command will return a status message and upto 5 results from the Soundcloud search API
+        h6 Message 1
+        blockquote Searching soundcloud, please be patient...
+        h6 Message 2
+        blockquote http://soundcloud.com/aleksander-vinter/savant-starfish
+        h6 Message 3
+        blockquote http://soundcloud.com/aleksander-vinter/03-sledgehammer
+        h6 Message 4
+        blockquote http://soundcloud.com/aleksander-vinter/savant-technodrome
+        h6 Message 5
+        blockquote http://soundcloud.com/aleksander-vinter/savant-wildstyle
+        h6 Message 6
+        blockquote http://soundcloud.com/aleksander-vinter/savant-vario-64
+    div.command
+        h3#command-twitter Twitter (t;)
+        p Used to search Twitter for the supplied term. For Twitter search options please see 
+            a(href='https://dev.twitter.com/docs/using-search', title='Using the Twitter Search API') Using the Twitter Search API
+        h4 Example
+        h5 Request
+        blockquote t;Rugby World Cup
+        h5 Response
+        p This command will return a status message and upto 5 results from the Twitter search API
+        h6 Message 1
+        blockquote Searching twitter, please be patient...
+        h6 Message 2
+        blockquote TiffannyJunee: @russiarugby doing it their way @ #RWC2011 See you in Nelson! :-) http://t.co/v0toiij5
+        h6 Message 3
+        blockquote MotatauMarae: All Blacks thump France in Rugby World Cup; US preps for Italy clash: The All Blacks were simply unstoppabl... http://t.co/itlnTBWC (LT)
+        h6 Message 4
+        blockquote SportSquareNews: Rugby World Cup 2011: Ireland victory pleases Kidney http://t.co/WME2ZaAA
+        h6 Message 5
+        blockquote Bettor_rugby: World Cup preview: Namibia v Wales, Bettor.com http://t.co/5yTdXzXs
+        h6 Message 6
+        blockquote PierreOlivierD: Marc Lièvremont defends decision to pick Morgan Parra at fly-half http://t.co/8jJLT5mH via @guardian
+    div.command
+        h3#command-status Status (s;)
+        p Allows you to update the bot's own instant messenger status
+        h4 Example
+        h5 Request
+        blockquote s;This is the bot's new status!
+        h5 Response
+        p The bot's status message will be updated as well as issuing the following response.
+        blockquote Status message now set to This is the bot's new status!
+    div.command
+        h3#command-bounce Bounce (b;)
+        p This command causes the bot to echo back whatever you send it.
+        h4 Example
+        h5 Request
+        blockquote b;Hello my new bot friend!
+        h5 Response
+        blockquote b;Hello my new bot friend!

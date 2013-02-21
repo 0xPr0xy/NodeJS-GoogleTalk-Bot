@@ -1,0 +1,30 @@
+{
+  "name": "njsbot",
+  "version": "0.0.1",
+  "description": "BBG ChatBot",
+  "main": "config.js",
+  "dependencies": {
+    "express": "~3.1.0",
+    "jade": "~0.28.1",
+    "node-expat": "~1.6.1",
+    "node-xmpp": "~0.3.2",
+    "request": "~2.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/treffynnon/njsbot.git"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.2.x"
+  },
+  "author": "0xPr0xy",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "6716685d6fe26fbba4ffc78eb7906379ec698ff3"
+}
